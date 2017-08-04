@@ -1,0 +1,44 @@
+<link rel="import" href="../node_modules/@polymer/polymer/polymer-element.html">
+
+<dom-module id="config-app">
+  <template>
+    <style>
+      :host {
+        font-size: 16px;
+        font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
+        line-height: 1.45;
+      }
+      pre {
+        margin: 1.25rem 0;
+        padding-left: 1.5rem;
+        border-left: 4px solid #58D4FF;
+        font-size: 1.14rem;
+        line-height: 2;
+        color: #8B98A9;
+      }
+    </style>
+    <h2>Config</h2>
+    <pre>[[config.api.url]]</pre>
+    <a href="./test/index.html">Run tests in browser</a>
+  </template>
+  <script>
+    class ConfigApp extends Polymer.Element {
+      static get is() { return 'config-app'; }
+      static get properties() {
+        return {
+          config: {
+            type: Object,
+            observer: '_configChanged'
+          }
+        };
+      }
+      constructor() {
+        super();
+      }
+      _configChanged(config) {
+        console.log('App config =', config);
+      }
+    }
+    window.customElements.define(ConfigApp.is, ConfigApp);
+  </script>
+</dom-module>

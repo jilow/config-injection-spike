@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../bower_components/web-component-tester/browser.js"></script>
+    <!-- Import the element to test -->
+    <link rel="import" href="../config-app.html">
+  </head>
+  <body>
+    <test-fixture id="basic">
+      <template>
+        <config-app></config-app>
+      </template>
+    </test-fixture>
+    <script>
+      'use strict';
+      suite('config-app tests', function() {
+        
+        var element;
+        setup(function() {
+          element = fixture('basic');
+        });
+
+        test('it can instantiate', function() {
+          expect(element).to.be.ok;
+        });
+
+        test('it has a config property', function() {
+          expect(element).to.have.property('config');
+        });
+
+      });
+    </script>
+  </body>
+</html>

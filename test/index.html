@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <title>Tests</title>
+    <script src="../test.js"></script>
+    <script src="../bower_components/web-component-tester/browser.js"></script>
+  </head>
+  <body>
+    <script>
+      WCT.loadSuites([
+        // Load 'config-app.html' test suite, using native shadow dom
+        'config-app.html?dom=shadow',
+        // Load 'config-app.html' test suite, using shadydom
+        'config-app.html?wc-shadydom=true',
+      ]);
+    </script>
+  </body>
+</html>

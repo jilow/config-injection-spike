@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+      <title>Hello World</title>
+      <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+      <link rel="import" href="./config-app.html">
+  </head>
+  <body>
+      <config-app id="app"></config-app>
+      <script>
+          var app = document.querySelector("#app");
+          app.config = window.env.CONFIG;
+      </script>
+  </body>
+</html>

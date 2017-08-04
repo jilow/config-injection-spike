@@ -1,0 +1,20 @@
+{
+  "name": "config-injection-spike",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js --config ./config/production.json",
+    "test": "wct"
+  },
+  "dependencies": {
+    "@polymer/polymer": "^2.0.1",
+    "@webcomponents/webcomponentsjs": "^1.0.1"
+  },
+  "devDependencies": {
+    "command-line-args": "^4.0.6",
+    "connect-inject": "^0.4.0",
+    "express": "^4.15.3",
+    "web-component-tester": "^6.0.0"
+  }
+}
